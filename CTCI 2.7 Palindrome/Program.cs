@@ -77,7 +77,7 @@ namespace CTCI_2._7_Palindrome
                 {
                     sw.Stop();
 
-                    Console.WriteLine("Iterative: Linked list is not a palindrome. (" + sw.ElapsedTicks + " ticks)");
+                    Console.WriteLine("Iterative: List is not a palindrome. (" + sw.ElapsedTicks + " ticks)");
                     return;
                 }
 
@@ -86,8 +86,7 @@ namespace CTCI_2._7_Palindrome
 
             sw.Stop();
 
-            Console.WriteLine("Iterative: Linked list is a palindrome. (" + sw.ElapsedTicks + " ticks)");
-            Console.WriteLine();
+            Console.WriteLine("Iterative: List is a palindrome. (" + sw.ElapsedTicks + " ticks)");
         }
 
         /// <summary>
@@ -139,7 +138,7 @@ namespace CTCI_2._7_Palindrome
                 {
                     sw.Stop();
 
-                    Console.WriteLine("Reverse: List is not a palindrome. (" + sw.ElapsedTicks + " ticks)");
+                    Console.WriteLine("Reverse:   List is not a palindrome. (" + sw.ElapsedTicks + " ticks)");
                     return;
                 }
 
@@ -149,8 +148,7 @@ namespace CTCI_2._7_Palindrome
 
             sw.Stop();
 
-            Console.WriteLine("Reverse: List is a palindrome. (" + sw.ElapsedTicks + " ticks)");
-            Console.WriteLine();
+            Console.WriteLine("Reverse:   List is a palindrome. (" + sw.ElapsedTicks + " ticks)");
         }
 
         /// <summary>
@@ -190,9 +188,9 @@ namespace CTCI_2._7_Palindrome
             sw.Stop();
 
             if (rslt.result == true)            
-                Console.WriteLine("Recursive: list is palindrome. (" + sw.ElapsedTicks + " ticks)");            
+                Console.WriteLine("Recursive: List is a palindrome. (" + sw.ElapsedTicks + " ticks)");            
             else
-                Console.WriteLine("Recursive: is not palindrome. (" + sw.ElapsedTicks + " ticks)");
+                Console.WriteLine("Recursive: List is not a palindrome. (" + sw.ElapsedTicks + " ticks)");
         }
 
         private static Result Recurse(Node head, int length)
