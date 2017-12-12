@@ -236,31 +236,6 @@ namespace CTCI_2._7_Palindrome
             return counter;
         }
 
-        
-
-        //private static bool CheckIfPalindrome(Node passed_node, int count_thisnode, ref int total_nodes)
-        //{
-        //    ++count_thisnode; // contains this node's position in the list (1-based)
-        //    ++total_nodes; // during unspooling, contains total count of nodes (1-based)
-
-        //    bool result = false;
-
-        //    if (passed_node.next != null)
-        //        result = CheckIfPalindrome(passed_node.next, count_thisnode, ref total_nodes);
-
-        //    if (count_thisnode < (total_nodes / 2))
-        //        return result;
-
-        //    // compare this node to the mirrored node
-        //    int value = GetNodeData(passed_total_nodes - count_thisnode);
-        //}
-
-        //private static int GetNodeData(node passed_head, int node_position)
-        //{
-        //    for (int i = 0; i < node_position; ++i)
-
-        //}
-
         private static Node CreateSinglyLinkedList(int count)
         {
             if (count < 1)
@@ -277,7 +252,6 @@ namespace CTCI_2._7_Palindrome
                 n.next = new Node(rnd.Next(0, 1000));
                 n = n.next;
             }
-
 
             Console.WriteLine("List created with " + count + " nodes");
             Console.WriteLine();
