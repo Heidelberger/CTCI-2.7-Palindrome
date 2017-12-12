@@ -41,30 +41,41 @@ namespace CTCI_2._7_Palindrome
             }
         }
 
+        /// <summary>
+        /// 
+        /// 1. Create a new, reversed list from the original
+        /// 2. Compare the two lists node by node
+        /// 3. If any two nodes don't match, report false
+        /// 4. If no mismatches found, report true
+        /// 
+        /// Complexity:     Algorithm runs in O(N) time        
+        ///                 Each node is read once to create a node
+        ///                 Each node (both lists) is read once to
+        ///                 compare.
+        ///                 
+        ///                 Requires O(N) memory
+        ///                 As input grows, memory requirement grows
+        ///                 The input is copied, so the algo requires 
+        ///                 as much memory as the input represents.
+        /// 
+        /// </summary>
+        /// <param name="passed_head"></param>
         private static void CheckIfPalindrome_Reverse(Node passed_head)
         {
             Stopwatch sw = Stopwatch.StartNew();
 
-            Node runner = passed_head;            
-            Node rev_head = null;
-
             // build reversed list from passed_head
+            Node runner = passed_head;            
+            Node rev_head = null;           
             while (runner != null)
             {
                 rev_head = new Node(runner.Data, rev_head);
                 
                 runner = runner.next;
-            }            
-
-            //Console.WriteLine();
-            //Console.WriteLine("Forward list nodes:");
-            //PrintNodes(passed_head);
-            //Console.WriteLine("Reversed list nodes:");
-            //PrintNodes(rev_head);
-
-            runner = passed_head;
-
-            // compare lists
+            }    
+            
+            // compare original list to the new, reversed list
+            runner = passed_head;            
             while (runner.next != null)
             {
                 if (runner.Data != rev_head.Data)
